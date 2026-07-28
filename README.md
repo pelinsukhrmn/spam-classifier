@@ -1,10 +1,15 @@
 # Spam Classifier
 
-A text classification model using Naive Bayes to detect spam SMS messages.
+A text classifier that flags SMS messages as spam or ham (not spam) using Naive Bayes.
 
-- Dataset: SMS Spam Collection (5,574 real SMS messages, labeled ham/spam)
-- Algorithm: Multinomial Naive Bayes
-- Vectorization: CountVectorizer (bag-of-words)
+## How it works
+
+- Loads the SMS Spam Collection dataset (`data/sms.tsv`, 5,574 labeled real SMS messages)
+- Splits the data into train/test sets (80/20)
+- Vectorizes the messages with `CountVectorizer` (bag-of-words, English stop words removed)
+- Trains a Multinomial Naive Bayes model
+- Prints accuracy, a confusion matrix, and a classification report on the test set
+- Runs two example messages through the model (an obvious spam prize message and a normal one) and prints the predictions
 
 ## Setup
 
